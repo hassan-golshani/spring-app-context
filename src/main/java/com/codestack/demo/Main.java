@@ -22,16 +22,4 @@ public class Main {
         System.out.println(userAccountById);
 
     }
-
-    @Bean
-    public UserAccountRepository userAccountRepository() {
-        return new UserAccountRepository();
-    }
-
-    @Bean
-    public UserAccountService userAccountService(UserAccountRepository userAccountRepository) {
-        UserAccountService userAccountService = new UserAccountService();
-        userAccountService.setUserAccountRepository(userAccountRepository);
-        return userAccountService;
-    }
 }
